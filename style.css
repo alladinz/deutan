@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Paytone+One&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(112.27deg, rgba(187, 173, 255, 0.86) 11.76%, #8E94F2 61.05%, #757BC8 99.12%);
+    animation: gradient 6s ease infinite;
+    background-size: 100% 100%;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+span{
+    font-size: 3em;
+}
+.center-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+.title{
+    animation: firstspan 4.5s forwards cubic-bezier(0.0, 0.0, 1.0, 1.0);
+    z-index: 1;
+    position: relative;
+    color: #fff;
+    top: -80px;
+    letter-spacing: -0.075em;
+}
+.animation{
+    text-align: center;
+    display: inline-block;
+    animation: fadeIn 4.5s forwards, grow 2.5s forwards;
+    font-family: 'Paytone One';
+    opacity: 0;
+    transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.slide{
+    display: inline-block;
+    overflow: hidden;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        transition-timing-function: scale(1);
+    }
+    50%{
+        opacity: 1;
+        transition-timing-function: scale(1);
+    }
+    100%{
+        opacity: 1;
+        transition-timing-function: scale(1);
+    }
+}
+@keyframes firstspan {
+    0%{
+        transform: translateX(50%);
+    }
+    60%{
+        transform: translateX(50%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes grow {
+    0%{
+        font-size: 2rem;
+    }
+    100%{
+        font-size: 5.5rem;
+    }
+}
+
+.shadow__btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+    font-family: 'Montserrat';
+  }
+  
+  .shadow__btn {
+    background: #b664fa;
+    box-shadow: 0 0 25px #b664fa;
+  }
+  
+  .shadow__btn:hover {
+    box-shadow: 0 0 5px #b664fa,
+                0 0 25px #b664fa,
+                0 0 50px #b664fa,
+                0 0 100px #b664fa;
+  }
+
+  .clmn-bttns{
+    top: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+  }
+  .login{
+    font-size: 1em;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    color: #fff;
+    text-decoration: underline;
+  }
