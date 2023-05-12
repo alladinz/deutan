@@ -9,19 +9,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="center-title">
-        <div class="animation">
-        <!-- <div class="title">Deutan.</div> -->
-        <span class="title">Deutan.</span>
+    <div class="center-title" id="center-title">
+        <div class="animation" id="animation">
+        <span class="title" id="title">Deutan.</span>
         <span class="slide"></span>
         </div>
 
-        <div class="clmn-bttns">
-            <button class="shadow__btn">
+        <div class="clmn-bttns" id="clmn-bttns">
+            <button class="shadow__btn" id="shadow__btn" onclick="setTimeout(ShowDiv, 2000); setTimeout(Disappear, 700);">
                 Criar Conta
             </button><br>
-            <span class="login">Já tenho uma conta</span>
+            <span class="login" id="login">Já tenho uma conta</span>
         </div>
     </div>
+
+    <div class="divTest" id="divTest" style="display:none;">TESTANDO</div>
 </body>
+<script>
+    function ShowDiv() {
+    document.getElementById("divTest").style.display = "";
+
+}
+    function Disappear(){
+        title.classList.toggle('fade');
+        animation.classList.toggle('fade');
+        document.querySelector('#login').classList.toggle('sumir')
+        document.querySelector('#shadow__btn').classList.toggle('fade')
+    }
+</script>
 </html>

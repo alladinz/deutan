@@ -41,10 +41,26 @@ span{
     top: -80px;
     letter-spacing: -0.075em;
 }
+#title.fade{
+    animation: disappear 2.5s forwards cubic-bezier(0.0, 0.0, 1.0, 1.0);
+    z-index: 1;
+    position: relative;
+    color: #fff;
+    top: -80px;
+    letter-spacing: -0.075em;
+}
 .animation{
     text-align: center;
     display: inline-block;
     animation: fadeIn 4.5s forwards, grow 2.5s forwards;
+    font-family: 'Paytone One';
+    opacity: 0;
+    transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+#animation.fade{
+    text-align: center;
+    display: inline-block;
+    animation: fadeOut 1.0s forwards, grow 2.5s forwards;
     font-family: 'Paytone One';
     opacity: 0;
     transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -68,6 +84,20 @@ span{
         transition-timing-function: scale(1);
     }
 }
+@keyframes fadeOut {
+    100%{
+        opacity: 0;
+        transition-timing-function: scale(1);
+    }
+    50%{
+        opacity: 1;
+        transition-timing-function: scale(1);
+    }
+    0%{
+        opacity: 1;
+        transition-timing-function: scale(1);
+    }
+}
 @keyframes firstspan {
     0%{
         transform: translateX(50%);
@@ -76,6 +106,17 @@ span{
         transform: translateX(50%);
     }
     100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes disappear {
+    100%{
+        transform: translateX(50%);
+    }
+    60%{
+        transform: translateX(50%);
+    }
+    0%{
         transform: translateX(0%);
     }
 }
@@ -100,6 +141,10 @@ span{
     transition: 0.5s;
     transition-property: box-shadow;
     font-family: 'Montserrat';
+    transition: opacity 0.5s ease-out;
+  }
+  #shadow__btn.fade {
+    opacity: 0;
   }
   
   .shadow__btn {
@@ -129,4 +174,16 @@ span{
     font-weight: 600;
     color: #fff;
     text-decoration: underline;
+    transition: opacity 0.5s ease-out;
   }
+  #login.sumir{
+    opacity: 0;
+  }
+
+.divTest{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    position: absolute;
+    top: 20px;
+}

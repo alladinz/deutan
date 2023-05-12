@@ -10,20 +10,20 @@
 </head>
 <body>
     <div class="center-title">
-        <!--<div class="animation">
-        <span class="title">Deutan.</span>
+      <div class="animation" id="animation">
+        <span class="title" id="title">Deutan.</span>
         <span class="slide"></span>
         </div>
 
-        <div class="clmn-bttns">
-            <button class="shadow__btn">
+        <div class="clmn-bttns" id="clmn-bttns">
+            <button class="shadow__btn" id="shadow__btn" onclick="setTimeout(ShowDiv, 2000); setTimeout(Disappear, 700);">
                 Criar Conta
             </button><br>
-            <span class="login">Já tenho uma conta</span>
+            <span class="login" id="login">Já tenho uma conta</span>
         </div>
-    </div>-->
+    </div>
 
-    <div class="center-cadastro">
+    <div class="center-cadastro" id="center-cadastro">
         <div class="balls">
             <div class="welcome">
                 <div class="title-welcome">Deutan.</div>
@@ -82,5 +82,16 @@
       }
     }
 
+    function ShowDiv() {
+        document.getElementById("center-cadastro").style.display = "flex";
+    }
+
+    function Disappear(){
+        title.classList.toggle('fade');
+        animation.classList.toggle('fade');
+        document.querySelector('#login').classList.toggle('sumir')
+        document.querySelector('#shadow__btn').classList.toggle('fade')
+    }
+</script
 </script>
 </html>
