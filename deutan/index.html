@@ -30,25 +30,25 @@
                 <div class="line-purple"></div>
                 <div class="mensagem">Seja Bem-Vindo!</div>
                 <div class="pergunta">Já tem uma conta?</div>
-                <button class="entrar-link" onclick="fadeOutCadas();">Entrar</button>
+                <button class="entrar-link" onclick="setTimeout(fadeOutCadas, 300); setTimeout(fadeInLogin, 1000);">Entrar</button>
             </div>
         </div>
         <div class="dados">
             <div class="sub">Inscreva-se</div>
             <div class="input-group">
                 <div class="title-dados">email</div>
-                <input required="" type="text" name="text" autocomplete="off" class="input">
+                <input required="" type="text" name="text" autocomplete="off" class="input" id="emailcadas">
                 <label class="user-label">Endereço de email</label>
               </div>
             <div class="input-group">
                 <div class="title-dados">senha</div>
-                <input required="" type="password" name="text" autocomplete="off" class="input" id="input-senha-cadas">
+                <input required="" type="password" name="text" autocomplete="off" class="input" id="senhacadas">
             <label class="user-label">Escolha sua senha</label>
               </div>
 
               <div class="content">
                 <label class="checkBox" id="checkBox">
-                  <input id="ch1" type="checkbox" onclick="showPassCadas()">
+                  <input id="checkpasscadas" type="checkbox" onclick="showPassCadas()">
                   <div class="transition"></div>
                 </label> <div class="show-password">Mostrar senha</div>
               </div>
@@ -77,25 +77,25 @@
               <div class="line-purple"></div>
               <div class="mensagem">Boas vindas de volta!</div>
               <div class="pergunta">Não tem uma conta?</div>
-              <button class="criar-link">Criar</button>
+              <button class="criar-link" onclick="setTimeout(fadeOutLogin, 300); setTimeout(fadeInCadas, 1000);">Criar</button>
           </div>
       </div>
       <div class="dados">
           <div class="enter">Login</div>
           <div class="input-group">
               <div class="title-dados">email</div>
-              <input required="" type="text" name="text" autocomplete="off" class="input">
+              <input required="" type="text" name="text" autocomplete="off" class="input" id="emaillogin">
               <label class="user-label">Endereço de email</label>
             </div>
           <div class="input-group">
               <div class="title-dados">senha</div>
-              <input required="" type="password" name="text" autocomplete="off" class="input" id="input-senha-login">
+              <input required="" type="password" name="text" autocomplete="off" class="input" id="senhalogin">
           <label class="user-label">Insira sua senha</label>
             </div>
 
             <div class="content">
               <label class="checkBox" id="checkBox">
-                <input id="ch1" type="checkbox" onclick="showPassLogin()">
+                <input id="checkpasslogin" type="checkbox" onclick="showPassLogin()">
                 <div class="transition"></div>
               </label> <div class="show-password">Mostrar senha</div>
             </div>
@@ -119,7 +119,7 @@
 <script>
 
     function showPassCadas(){
-    var x = document.getElementById("input-senha-cadas");
+    var x = document.getElementById("senhacadas");
       if (x.type === "password") {
         x.type = "text";
       } else {
@@ -154,8 +154,29 @@
     }
 
     function fadeOutCadas(){
-        document.getElementById("center-cadastro").style.animation = "fadeOut 1.0s forwards";
-        //document.getElementById("center-cadastro").style.display = "none";
+        document.getElementById("center-cadastro").style.animation = "fadeOut 0.6s forwards, littleGrow 0.5s forwards";
+        document.getElementById("center-login").style.zIndex = "1";
+        document.getElementById("center-cadastro").style.zIndex = "0";
+    }
+    function fadeInLogin(){
+        document.getElementById("center-login").style.display = "flex";
+        document.getElementById("center-login").style.animation = "";
+        emailcadas.value = "";
+        senhacadas.value = "";
+        checkpasscadas.checked = false;
+    }
+
+    function fadeOutLogin(){
+        document.getElementById("center-login").style.animation = "fadeOut 0.6s forwards, littleGrow 0.5s forwards";
+        document.getElementById("center-login").style.zIndex = "0";
+        document.getElementById("center-cadastro").style.zIndex = "1";
+    }
+    function fadeInCadas(){
+        document.getElementById("center-cadastro").style.display = "flex";
+        document.getElementById("center-cadastro").style.animation = "";
+        emaillogin.value = "";
+        senhalogin.value = "";
+        checkpasslogin.checked = false;
     }
 </script
 </script>
