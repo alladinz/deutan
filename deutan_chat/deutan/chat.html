@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deutan | Chat</title>
+
+    <link rel="stylesheet" href="style-chat.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,0,0" />
+</head>
+<body>
+    <div class="left-rect">
+        <div class="clmn-mensg">
+            <div class="home-bar">
+                <div class="logo-name">Dt.</div>
+                <div class="line-purple"></div>
+                <span class="material-symbols-rounded" id="icon-options" style="top: 60px;">
+                    menu
+                </span>
+                <span class="material-symbols-rounded" style="top: 260px; color: #8187DC;" id="icon-home" onclick="setTimeout(moveSelectedHome, 100);">
+                    home
+                </span>
+                <span class="material-symbols-rounded" style="top: 320px;" id="icon-calendar" onclick="setTimeout(moveSelectedCalendar, 100);">
+                    calendar_month
+                </span>
+                <span class="material-symbols-rounded" style="top: 380px;" id="icon-sms" onclick="setTimeout(moveSelectedSms, 100);">
+                    sms
+                </span>
+                <span class="material-symbols-rounded" style="top: 670px;" id="icon-config" onclick="setTimeout(moveSelectedConfig, 100);">
+                    tune
+                </span>
+                <div class="icon-selected" id="icon-selected"></div>
+            </div>
+            <div class="back-balls"></div>
+            <div class="mensagens">Mensagens</div>
+            <div class="search-opt">
+                <span class="material-symbols-rounded" style="scale: 0.6; top: 32px; color: #959595;" id="icon-config" onclick="setTimeout(moveSelectedConfig, 100);">
+                    search
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function moveSelectedHome(){
+        document.getElementById("icon-selected").style.top = "260px";
+        document.getElementById("icon-home").style.color = "#8187DC";
+        document.getElementById("icon-calendar").style.color = "#fff";
+        document.getElementById("icon-sms").style.color = "#fff";
+        document.getElementById("icon-config").style.color = "#fff";
+    }
+    function moveSelectedCalendar(){
+        document.getElementById("icon-selected").style.top = "320px";
+        document.getElementById("icon-home").style.color = "#fff";
+        document.getElementById("icon-calendar").style.color = "#8187DC";
+        document.getElementById("icon-sms").style.color = "#fff";
+        document.getElementById("icon-config").style.color = "#fff";
+    }
+    function moveSelectedSms(){
+        document.getElementById("icon-selected").style.top = "380px";
+        document.getElementById("icon-home").style.color = "#fff";
+        document.getElementById("icon-calendar").style.color = "#fff";
+        document.getElementById("icon-sms").style.color = "#8187DC";
+        document.getElementById("icon-config").style.color = "#fff";
+    }
+    function moveSelectedConfig(){
+        document.getElementById("icon-selected").style.top = "670px";
+        document.getElementById("icon-home").style.color = "#fff";
+        document.getElementById("icon-calendar").style.color = "#fff";
+        document.getElementById("icon-sms").style.color = "#fff";
+        document.getElementById("icon-config").style.color = "#8187DC";
+    }
+</script>
+</html>

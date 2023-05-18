@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deutan</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="center-title">
+      <div class="animation" id="animation">
+        <span class="title" id="title">Deutan.</span>
+        <span class="slide"></span>
+        </div>
+
+        <div class="clmn-bttns" id="clmn-bttns">
+            <button class="shadow__btn" id="shadow__btn" onclick="setTimeout(Disappear, 700); setTimeout(ShowCadas, 2000);">
+                Criar Conta
+            </button><br>
+            <button class="login" id="login" onclick="setTimeout(Disappear, 700); setTimeout(ShowLogin, 2000);">Já tenho uma conta</button>
+        </div>
+    </div>
+
+    <div class="center-cadastro" id="center-cadastro">
+        <div class="balls">
+            <div class="welcome">
+                <div class="title-welcome">Deutan.</div>
+                <div class="line-purple"></div>
+                <div class="mensagem">Seja Bem-Vindo!</div>
+                <div class="pergunta">Já tem uma conta?</div>
+                <button class="entrar-link" onclick="fadeOutCadas();">Entrar</button>
+            </div>
+        </div>
+        <div class="dados">
+            <div class="sub">Inscreva-se</div>
+            <div class="input-group">
+                <div class="title-dados">email</div>
+                <input required="" type="text" name="text" autocomplete="off" class="input">
+                <label class="user-label">Endereço de email</label>
+              </div>
+            <div class="input-group">
+                <div class="title-dados">senha</div>
+                <input required="" type="password" name="text" autocomplete="off" class="input" id="input-senha-cadas">
+            <label class="user-label">Escolha sua senha</label>
+              </div>
+
+              <div class="content">
+                <label class="checkBox" id="checkBox">
+                  <input id="ch1" type="checkbox" onclick="showPassCadas()">
+                  <div class="transition"></div>
+                </label> <div class="show-password">Mostrar senha</div>
+              </div>
+
+              <button class="btn-criar">Criar</button>
+
+              <div class="line-purple2"></div><div class="separete">ou</div>
+
+              <button class="button">
+                <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 262">
+                <path fill="#4285F4" d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"></path>
+                <path fill="#34A853" d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"></path>
+                <path fill="#FBBC05" d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"></path>
+                <path fill="#EB4335" d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"></path>
+              </svg>
+                Continuar com o Google
+              </button>
+        </div>
+    </div>
+
+
+    <div class="center-login" id="center-login">
+      <div class="balls">
+          <div class="welcome">
+              <div class="title-welcome">Deutan.</div>
+              <div class="line-purple"></div>
+              <div class="mensagem">Boas vindas de volta!</div>
+              <div class="pergunta">Não tem uma conta?</div>
+              <button class="criar-link">Criar</button>
+          </div>
+      </div>
+      <div class="dados">
+          <div class="enter">Login</div>
+          <div class="input-group">
+              <div class="title-dados">email</div>
+              <input required="" type="text" name="text" autocomplete="off" class="input">
+              <label class="user-label">Endereço de email</label>
+            </div>
+          <div class="input-group">
+              <div class="title-dados">senha</div>
+              <input required="" type="password" name="text" autocomplete="off" class="input" id="input-senha-login">
+          <label class="user-label">Insira sua senha</label>
+            </div>
+
+            <div class="content">
+              <label class="checkBox" id="checkBox">
+                <input id="ch1" type="checkbox" onclick="showPassLogin()">
+                <div class="transition"></div>
+              </label> <div class="show-password">Mostrar senha</div>
+            </div>
+
+            <button class="btn-entrar">Entrar</button>
+
+            <div class="line-purple2"></div><div class="separete">ou</div>
+
+            <button class="button">
+              <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 262">
+              <path fill="#4285F4" d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"></path>
+              <path fill="#34A853" d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"></path>
+              <path fill="#FBBC05" d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"></path>
+              <path fill="#EB4335" d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"></path>
+            </svg>
+              Continuar com o Google
+            </button>
+      </div>
+    </div>
+    
+</body>
+<script>
+
+    function showPassCadas(){
+    var x = document.getElementById("input-senha-cadas");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+
+    function showPassLogin(){
+    var x = document.getElementById("input-senha-login");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+
+    function ShowCadas() {
+        document.getElementById("center-cadastro").style.display = "flex";
+    }
+
+    function ShowLogin() {
+        document.getElementById("center-login").style.display = "flex";
+    }
+
+    function Disappear(){
+        title.classList.toggle('fade');
+        animation.classList.toggle('fade');
+        document.querySelector('#login').classList.toggle('sumir')
+        document.querySelector('#shadow__btn').classList.toggle('fade')
+
+        document.getElementById("shadow__btn").onclick = null;
+    }
+
+    /*function fadeOutCadas(){
+        document.getElementById("center-cadastro").style.animation = "fadeOut 1.0s forwards";
+        //document.getElementById("center-cadastro").style.display = "none";
+    }*/
+</script>
+</script>
+</html>
